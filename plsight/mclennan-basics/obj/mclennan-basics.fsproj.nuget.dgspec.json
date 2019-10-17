@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\plsight\\mclennan-basics\\mclennan-basics.fsproj": {}
+  },
+  "projects": {
+    "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\plsight\\mclennan-basics\\mclennan-basics.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\plsight\\mclennan-basics\\mclennan-basics.fsproj",
+        "projectName": "mclennan-basics",
+        "projectPath": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\plsight\\mclennan-basics\\mclennan-basics.fsproj",
+        "packagesPath": "C:\\Users\\cantr\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\plsight\\mclennan-basics\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cantr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "FSharp.Core": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
