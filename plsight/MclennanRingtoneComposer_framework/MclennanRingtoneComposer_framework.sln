@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MclennanRingtoneComposer_framework", "MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework.fsproj", "{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F74860D3-209E-416F-BDAC-573F1FD41293}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "mclennan-basics": {
+      "commandName": "Project",
+      "commandLineArgs": "10 hi"
+    }
+  }
+}
