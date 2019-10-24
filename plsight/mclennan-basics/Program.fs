@@ -24,6 +24,23 @@ it was the worst of times,".[0..5]
 
 printfn "%b" ("03249" |> String.forall System.Char.IsDigit)
 
+printfn "%A" (1 :: [2;3])
+
+printfn "%A" [10..-1..0]
+
+printfn "%A" ([10..-1..0] @ [42])
+
+printfn "%A" [for x in 1..10 -> 2 * x]
+
+printfn "%A" [
+    for r in 1..8 do
+    for c in 1..8 do
+        if r <> c then
+            yield (r, c)
+]
+
+printfn "%A" [|1;2;3|].[0]
+
 [<EntryPoint>]
 let main argv =
     printArray argv
