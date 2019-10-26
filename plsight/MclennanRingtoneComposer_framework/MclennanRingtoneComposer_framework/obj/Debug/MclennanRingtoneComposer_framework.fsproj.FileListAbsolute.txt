@@ -25,3 +25,7 @@ C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_f
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework\bin\Debug\FSharp.Charting.dll
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework\bin\Debug\FSharp.Charting.xml
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework\obj\Debug\MclennanRingtoneComposer_framework.exe.config
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework\bin\Debug\FParsec.dll
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework\bin\Debug\FParsecCS.dll
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework\bin\Debug\FParsec.xml
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework\bin\Debug\FParsecCS.xml
