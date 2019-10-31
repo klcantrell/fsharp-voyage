@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MclennanRingtoneComposer_framework", "MclennanRingtoneComposer_framework\MclennanRingtoneComposer_framework.fsproj", "{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Composer", "Composer\Composer.fsproj", "{11F6F21E-849E-4031-992C-C63B11F017D4}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Tests", "Tests\Tests.fsproj", "{8E90A2FC-19B7-45C5-ACC5-1D89B034B72C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AC1FFEA8-D816-4C16-AFA7-409A58BE15EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11F6F21E-849E-4031-992C-C63B11F017D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F6F21E-849E-4031-992C-C63B11F017D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F6F21E-849E-4031-992C-C63B11F017D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F6F21E-849E-4031-992C-C63B11F017D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E90A2FC-19B7-45C5-ACC5-1D89B034B72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E90A2FC-19B7-45C5-ACC5-1D89B034B72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E90A2FC-19B7-45C5-ACC5-1D89B034B72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E90A2FC-19B7-45C5-ACC5-1D89B034B72C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
