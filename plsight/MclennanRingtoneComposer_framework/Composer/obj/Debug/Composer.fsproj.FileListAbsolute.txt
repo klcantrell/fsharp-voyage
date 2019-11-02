@@ -24,3 +24,4 @@ C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_f
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\Composer\obj\Debug\Composer.fsproj.CopyComplete
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\Composer\obj\Debug\Composer.dll
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\Composer\obj\Debug\Composer.pdb
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\MclennanRingtoneComposer_framework\Composer\obj\Debug\Composer.fsprojAssemblyReference.cache
