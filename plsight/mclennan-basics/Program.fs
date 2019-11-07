@@ -41,6 +41,54 @@ printfn "%A" [
 
 printfn "%A" [|1;2;3|].[0]
 
+try
+    failwith "An error message"
+with
+    | Failure msg -> printfn "Failed with %s" msg
+
+try
+    try
+        failwith "Another error message"
+    with
+        | Failure msg -> printfn "Failed with %s" msg
+finally
+    printfn "This always evaluates"
+
+try
+    try
+        failwith "Yet another error message"
+    finally
+        printfn "This will also always evaluate"
+with
+    | Failure msg -> printfn "Failed with %s" msg
+
+exception MyAwesomeException of string * int
+
+try
+    raise (MyAwesomeException("number", 1))
+with
+    | MyAwesomeException(msg, num) ->
+        printfn "Failed: %s. The number is %d" msg num
+
+try
+    1 / 0
+with
+    | :? System.DivideByZeroException as ex ->
+        printfn "Don't do that %s" ex.Message
+        0
+    | :? System.Exception as ex when ex.Message = "General error" ->
+        printfn "Some other error %s" ex.Message
+        0
+
+open System.IO
+
+let readAFile () =
+    use reader = new StreamReader(
+                    "text.txt")
+    reader.ReadToEnd()
+
+printfn "%s" (readAFile ())
+
 [<EntryPoint>]
 let main argv =
     printArray argv

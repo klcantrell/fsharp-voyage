@@ -5,7 +5,9 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\netcoreapp3.0\text.txt" />
     <Compile Include="Printer.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
+  <ItemGroup />
 </Project>
