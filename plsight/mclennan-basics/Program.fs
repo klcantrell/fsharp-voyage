@@ -144,3 +144,74 @@ let toNumberAndSquare (o: Option<string>) =
 
 Some "5" |> toNumberAndSquare |> printDoubleIfExists
 Some "foo" |> toNumberAndSquare |> printDoubleIfExists
+
+let div num den = num / den
+
+printfn "%A" (div 15 3)
+//div 15 0
+
+let safeDiv num den =
+    if den = 0 then
+        Choice1Of2 "divide by zero is undefined"
+    else
+        Choice2Of2 (num / den)
+
+printfn "%A" (safeDiv 15 3)
+printfn "%A" (safeDiv 15 0)
+
+printfn "%A" (seq {0..2..10})
+printfn "%A" (seq {for i in [1..10] -> i*i})
+
+let board = 
+    seq {
+        for row in [1..8] do
+            for column in [1..8] do
+                yield pown (-1) (row + column)
+    }
+    |> Seq.map (fun i -> if i = -1 then "x " else "o ")
+
+let printBoardSpace i v =
+    if i > 0 && i % 8 = 0 then
+        printfn ""
+    printf "%s" v
+Seq.iteri printBoardSpace board
+printfn ""
+printfn "%i" (Seq.length board)
+
+type Person = {
+    name: string
+    age: int
+}
+
+let peopleData = [
+    { name = "Abigail"; age = 6  }
+    { name = "Ben"; age = 12  }
+    { name = "Christine"; age = 18  }
+    { name = "Daniel"; age = 24  }
+    { name = "Emily"; age = 30  }
+]
+
+// using F# collection functions
+let namesOfAdults =
+    List.filter(fun p -> p.age >= 18) >> List.map(fun p -> p.name)
+
+printfn "%A" (namesOfAdults peopleData)
+
+// LINQ extension methods
+open System.Linq
+let namesOfAdultsLinq (data: List<Person>) = 
+    data
+        .Where(fun p -> p.age >= 18)
+        .Select(fun p -> p.name)
+
+printfn "%A" (namesOfAdultsLinq peopleData)
+
+// LINQ query expressions
+let namesOfAdultsLinqQuery (data: List<Person>) = 
+    query {
+        for p in data do
+        where (p.age >= 18)
+        select p.name
+    }
+
+printfn "%A" (namesOfAdultsLinqQuery peopleData)
