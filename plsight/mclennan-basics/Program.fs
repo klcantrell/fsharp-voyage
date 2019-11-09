@@ -1,5 +1,7 @@
 ﻿module Program
 
+open System
+open System.IO
 open Printer
 
 let minus1 x = x - 1
@@ -80,8 +82,6 @@ with
         printfn "Some other error %s" ex.Message
         0
 
-open System.IO
-
 let readAFile () =
     use reader = new StreamReader(
                     "text.txt")
@@ -120,3 +120,27 @@ let falsifiableAppendedListLength l1 l2 =
 
 Check.Quick appendedListLength
 Check.Quick falsifiableAppendedListLength
+
+let firstOdd = 
+    List.tryPick (fun x -> if x % 2 = 1 then Some x else None)
+
+let printIntIfExists = function
+    | Some x -> printfn "%s" ("The value is " + string x)
+    | None -> printfn "No value here..."
+
+let printDoubleIfExists = function
+    | Some x -> printfn "%s" ("The value is " + string x)
+    | None -> printfn "No value here..."
+
+(firstOdd [2;4;6]) |> printIntIfExists
+printIntIfExists <| firstOdd [2;4;5]
+
+let toNumberAndSquare (o: Option<string>) =
+    o
+    |> Option.bind (fun s ->
+                        let (succeeded, value) = Double.TryParse(s)
+                        if succeeded then Some value else None)
+    |> Option.bind (fun n -> n * n |> Some)
+
+Some "5" |> toNumberAndSquare |> printDoubleIfExists
+Some "foo" |> toNumberAndSquare |> printDoubleIfExists
