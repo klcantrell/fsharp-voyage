@@ -89,6 +89,27 @@ let readAFile () =
 
 printfn "%s" (readAFile ())
 
+let addPair (f, s) =
+    f + s
+
+let addPairWithMatch p =
+    match p with
+        | (f, 0) -> f
+        | (0, s) -> s
+        | (f, s) -> f + s
+
+printfn "%i" (addPair (1, 2))
+printfn "%i" (addPairWithMatch (0, 20))
+
+let fizzbuzzer i =
+    match i with
+        | _ when i % 3 = 0 && i % 5 = 0 -> "fizzbuzz"
+        | _ when i % 3 = 0-> "fizz"
+        | _ when i % 5 = 0-> "buzz"
+        | _ -> string i
+
+printfn "%A" ([1..100] |> List.map fizzbuzzer)
+
 [<EntryPoint>]
 let main argv =
     printArray argv

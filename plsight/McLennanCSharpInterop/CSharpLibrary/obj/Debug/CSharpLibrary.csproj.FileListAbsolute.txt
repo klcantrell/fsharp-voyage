@@ -1,0 +1,5 @@
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\McLennanCSharpInterop\CSharpLibrary\bin\Debug\CSharpLibrary.dll
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\McLennanCSharpInterop\CSharpLibrary\bin\Debug\CSharpLibrary.pdb
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\McLennanCSharpInterop\CSharpLibrary\obj\Debug\CSharpLibrary.csprojAssemblyReference.cache
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\McLennanCSharpInterop\CSharpLibrary\obj\Debug\CSharpLibrary.dll
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\McLennanCSharpInterop\CSharpLibrary\obj\Debug\CSharpLibrary.pdb
