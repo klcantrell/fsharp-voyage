@@ -24,3 +24,4 @@ C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\mclennan-basics\obj\Debug\
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\mclennan-basics\obj\Debug\netcoreapp3.0\mclennan-basics.fsproj.CopyComplete
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\mclennan-basics\obj\Debug\netcoreapp3.0\mclennan-basics.dll
 C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\mclennan-basics\obj\Debug\netcoreapp3.0\mclennan-basics.pdb
+C:\Users\cantr\Documents\Me\dev\fsharp-voyage\plsight\mclennan-basics\bin\Debug\netcoreapp3.0\FsCheck.dll

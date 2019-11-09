@@ -39,6 +39,10 @@
             "FSharp.Core": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "FsCheck": {
+              "target": "Package",
+              "version": "[2.14.0, )"
             }
           },
           "imports": [

@@ -8,10 +8,22 @@
     ".NETCoreApp,Version=v3.0": {
       "mclennan-basics/1.0.0": {
         "dependencies": {
-          "FSharp.Core": "4.7.0"
+          "FSharp.Core": "4.7.0",
+          "FsCheck": "2.14.0"
         },
         "runtime": {
           "mclennan-basics.dll": {}
+        }
+      },
+      "FsCheck/2.14.0": {
+        "dependencies": {
+          "FSharp.Core": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FsCheck.dll": {
+            "assemblyVersion": "2.14.0.0",
+            "fileVersion": "2.14.0.0"
+          }
         }
       },
       "FSharp.Core/4.7.0": {
@@ -70,6 +82,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "FsCheck/2.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4D8/O3OA0p5GFToCqweJai5BzN2ci5arKuuAJM8EHF/0Ss+scA7RWsXMhBwzEicy9nWaSRNL5RavzTz6zqFHkg==",
+      "path": "fscheck/2.14.0",
+      "hashPath": "fscheck.2.14.0.nupkg.sha512"
     },
     "FSharp.Core/4.7.0": {
       "type": "package",

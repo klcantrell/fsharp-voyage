@@ -110,7 +110,13 @@ let fizzbuzzer i =
 
 printfn "%A" ([1..100] |> List.map fizzbuzzer)
 
-[<EntryPoint>]
-let main argv =
-    printArray argv
-    0
+open FsCheck
+
+let appendedListLength l1 l2 =
+    (l1 @ l2).Length = l1.Length + l2.Length 
+
+let falsifiableAppendedListLength l1 l2 =
+    (l1 @ l2).Length = l1.Length + 1
+
+Check.Quick appendedListLength
+Check.Quick falsifiableAppendedListLength
