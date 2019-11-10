@@ -51,6 +51,7 @@
     <Compile Include="AudioTest.fs" />
     <Compile Include="ComposerParsingTest.fs" />
     <Content Include="App.config" />
+    <Compile Include="AssemblerTests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

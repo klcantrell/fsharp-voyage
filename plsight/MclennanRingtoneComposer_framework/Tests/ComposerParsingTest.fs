@@ -31,4 +31,8 @@ module ComposerParsing =
         
         [<Test>]
         member this.``A2 should be 440``() =
-            Assert.AreEqual(440., Tone (A, Two) |> frequency, 0.1)
+            Assert.AreEqual(
+                440.,
+                { length={ fraction=Full; extended=false }; sound=Tone (A, Two) } |> frequency,
+                0.1
+            )

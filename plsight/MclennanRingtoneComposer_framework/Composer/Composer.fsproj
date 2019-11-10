@@ -46,6 +46,7 @@
     <Compile Include="Audio.fs" />
     <Compile Include="Samples.fs" />
     <Compile Include="ComposerParsing.fs" />
+    <Compile Include="Assembler.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FParsec">

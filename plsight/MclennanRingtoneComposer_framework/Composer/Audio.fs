@@ -28,6 +28,10 @@ let pack (d:int16[]) =
     writer.Write(data)
     stream
 
-let write fileName (ms:MemoryStream) = 
+let writeSingle fileName (ms:MemoryStream) = 
     use fs = new FileStream(Path.Combine(Directory.GetCurrentDirectory(), fileName), FileMode.Create)
     ms.WriteTo(fs)
+
+let write fileName (streams:MemoryStream list) = 
+    use fs = new FileStream(Path.Combine(Directory.GetCurrentDirectory(), fileName), FileMode.Create)
+    streams |> List.iter (fun stream -> stream.WriteTo fs) 
