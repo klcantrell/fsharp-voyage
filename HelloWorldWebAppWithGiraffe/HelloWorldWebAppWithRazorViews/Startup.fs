@@ -8,7 +8,6 @@ open Microsoft.Extensions.DependencyInjection
 open Microsoft.Extensions.Hosting
 open System.IO
 open Giraffe
-open Giraffe.Razor
 
 open WebApp
 

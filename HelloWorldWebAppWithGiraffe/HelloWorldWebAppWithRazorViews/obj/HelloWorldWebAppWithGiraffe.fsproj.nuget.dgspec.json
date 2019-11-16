@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews.fsproj": {}
+    "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithGiraffe\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithGiraffe.fsproj": {}
   },
   "projects": {
-    "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews.fsproj": {
+    "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithGiraffe\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithGiraffe.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews.fsproj",
-        "projectName": "HelloWorldWebAppWithRazorViews",
-        "projectPath": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews.fsproj",
+        "projectUniqueName": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithGiraffe\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithGiraffe.fsproj",
+        "projectName": "HelloWorldWebAppWithGiraffe",
+        "projectPath": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithGiraffe\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithGiraffe.fsproj",
         "packagesPath": "C:\\Users\\cantr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithRazorViews\\HelloWorldWebAppWithRazorViews\\obj\\",
+        "outputPath": "C:\\Users\\cantr\\Documents\\Me\\dev\\fsharp-voyage\\HelloWorldWebAppWithGiraffe\\HelloWorldWebAppWithRazorViews\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
