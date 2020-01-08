@@ -1,0 +1,43 @@
+name: ${Build.SourceVersion}
+jobs:
+  - job: Windows
+    timeoutInMinutes: 0
+    pool:
+      vmImage: 'vs2017-win2016'
+    steps:
+      - task: UseDotNet@2
+        inputs:
+          version: '3.1.x'
+      - powershell: 'dotnet publish -r win-x64 -c release -p:UseCoreRT=true --output $(Build.ArtifactStagingDirectory)'
+        displayName: 'Build Windows artifact'
+      - task: PublishBuildArtifact@1
+        displayName: 'Publish Windows executable'
+        inputs:
+          pathToPublish: '${Build.ArtifactStagingDirectory}'
+          artifactName: windowsExe
+  - job: Release
+    timeoutInMinutes: 0
+    displayName: Release
+    dependsOn:
+      - Windows
+    condition: succeeded()
+    pool:
+      vmImage: ubuntu-16.04
+    steps:
+      - task: DownloadBuildArtifacts@0
+          displayName: 'Download Windows exectable'
+          inputs:
+            buildType: 'current'
+            downloadType: 'single'
+            artifactName: 'windowsExe'
+            downloadPath: '$(System.ArtifactsDirectory)'
+      - task: GitHubRelease@0
+          displayName: 'Release Package'
+          condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+          inputs:
+            gitHubConnection: 'klcantrell'
+            repositoryName: 'klcantrell/GenCssModulesType'
+            title: 'GenCssModulesType Release'
+            addChangeLog: false
+            assets: |
+              $(System.ArtifactsDirectory)/windowsExe/*.tgz
