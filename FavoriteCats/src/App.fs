@@ -1,20 +1,23 @@
 module App
 
-open Fable.Core
 open Fable.React
 open Fable.React.Props
 open Browser.Dom
+open StyledComponents
 
-[<ImportDefault("./App.css")>]
-let styles: {| app: string |} = jsNative
+type StyledAppProps =
+    { primary: bool }
 
-type AppProps =
-    { message: string }
+let StyledApp = styled.div [| "
+    background-color: ", (fun props -> if props.primary then "blue" else "red"), ";
+    height: 100px;
+    border: ", (fun props -> if props.primary then "20px" else "10px"), " solid black;
+    border-radius: 10px;
+" |]
 
-let appView (props: AppProps) =
-    let { message = message } = props
-    div [ ClassName styles.app ] [ str message ]
+let appView = FunctionComponent.Of (fun () -> 
+    div [ Style [ Border "1px solid black" ] ] [ str "hi" ])
 
-let App = FunctionComponent.Of appView
+let App = StyledApp { primary = true } (appView())
 
-ReactDom.render (App({ message = "sup" }), document.getElementById "app")
+ReactDom.render (App, document.getElementById "app")
