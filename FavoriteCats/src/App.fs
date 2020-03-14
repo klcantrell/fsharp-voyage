@@ -29,6 +29,7 @@ let catListsDecoder =
         { url = get.Required.Field "url" Decode.string })))
 
 let appView = FunctionComponent.Of (fun () -> 
+    let catImage = Hooks.useState("")
     Hooks.useEffect((fun () ->
         let result = promise {    
             let! result = 
@@ -39,10 +40,12 @@ let appView = FunctionComponent.Of (fun () ->
             return result;
         }
         result 
-        |> Promise.map Array.ofList
-        |> Promise.iter (Array.iter (fun cat -> console.log(cat)))
+        |> Promise.iter(fun catList ->
+            catList
+            |> List.head
+            |> fun cat -> catImage.update(cat.url))
     ), [||])
-    div [ Style [ Border "1px solid black" ] ] [ str "hi" ])
+    div [] [ str catImage.current ])
 
 let App = StyledApp { primary = true } (appView())
 
