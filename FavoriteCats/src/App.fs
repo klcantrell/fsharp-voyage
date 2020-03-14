@@ -11,27 +11,44 @@ open StyledComponents
 [<Import("CATS_API_KEY", "./env")>]
 let (catsApiKey: string) = jsNative
 
-type StyledAppProps = 
-    { primary: bool }
+let emptyProps = {||}
 
-let StyledApp = styled.div [| "
-    background-color: ", (fun props -> if props.primary then "blue" else "red"), ";
-    height: 100px;
-    border: ", (fun props -> if props.primary then "20px" else "10px"), " solid black;
-    border-radius: 10px;
-" |]
-
-type Cat =
+type CatData =
     { url: string }
 
 let catListsDecoder = 
-        (Decode.list (Decode.object (fun get -> 
-        { url = get.Required.Field "url" Decode.string })))
+    Decode.list (Decode.object (fun get -> 
+        { url = get.Required.Field "url" Decode.string }))
+
+type CatImageProps = 
+    { src: string }
+
+let GlobalStyles = styledSelf $ createGlobalStyle [| "
+    body {
+        background-color: black;
+    }
+" |]
+
+let StyledApp = styledParent $ Div [| "
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+" |]
+
+let StyledCatImage = styledSelf $ Img [| "
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    object-position: top center;
+" |]
 
 let appView = FunctionComponent.Of (fun () -> 
-    let catImage = Hooks.useState("")
+    let catImageUrl = Hooks.useState("")
+
     Hooks.useEffect((fun () ->
-        let result = promise {    
+        let catListPromise = promise {    
             let! result = 
                 Fetch.get (
                     "https://api.thecatapi.com/v1/images/search", 
@@ -39,14 +56,19 @@ let appView = FunctionComponent.Of (fun () ->
                     decoder = catListsDecoder)
             return result;
         }
-        result 
+        catListPromise 
         |> Promise.iter(fun catList ->
             catList
             |> List.head
-            |> fun cat -> catImage.update(cat.url))
+            |> fun cat -> catImageUrl.update(cat.url))
     ), [||])
-    div [] [ str catImage.current ])
 
-let App = StyledApp { primary = true } (appView())
+    fragment [] [
+        GlobalStyles emptyProps
+        StyledCatImage { src = catImageUrl.current }
+    ]
+)
+
+let App = StyledApp emptyProps (appView())
 
 ReactDom.render (App, document.getElementById "app")
