@@ -1,6 +1,7 @@
 module StyledComponents
 
 open Fable.Core
+open Fable.Core.JsInterop
 open Fable.React.ReactBindings
 
 type StyledComponent = obj
@@ -16,10 +17,10 @@ let _styled: IStyled = jsNative
 [<Import("createGlobalStyle", "styled-components")>]
 let createGlobalStyle: obj array -> StyledComponent = jsNative
 
-let styledParent (styledComponent: StyledComponent) props element = React.createElement (styledComponent, props, [ element ])
-let styledSelf (styledComponent: StyledComponent) props = React.createElement (styledComponent, props, [])
+let styled (styledComponent: StyledComponent) props element = 
+    React.createElement (styledComponent, keyValueList CaseRules.LowerFirst props, element)
 
 let Div = _styled.div
 let Img = _styled.img
 
-let ($) styledComponentRenderer (styledComponent: StyledComponent) = styledComponentRenderer styledComponent
+let (@@) styledComponentRenderer (styledComponent: StyledComponent) = styledComponentRenderer styledComponent

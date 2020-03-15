@@ -4,17 +4,21 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
-    "@babel/core": "^7.8.4",
-    "fable-compiler": "^2.4.15",
-    "fable-loader": "^2.1.8",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^5.0.1",
-    "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "react": "16.12.0",
+    "react-beautiful-dnd": "13.0.0",
+    "react-dom": "16.12.0",
+    "styled-components": "5.0.1"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.7"
+    "@babel/core": "7.8.4",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "7.8.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "1.10.7",
+    "fable-compiler": "2.4.15",
+    "fable-loader": "2.1.8",
+    "webpack": "4.41.6",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
   }
 }

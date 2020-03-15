@@ -18,6 +18,11 @@ module.exports = {
         test: /\.fs(x|proj)?$/,
         use: 'fable-loader',
       },
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: 'babel-loader',
+      },
     ],
   },
 };

@@ -1,0 +1,2 @@
+module ReactBeautifulDnd
+
