@@ -2,35 +2,26 @@ module App
 
 open Browser.Dom
 open Fable.Core
+open Fable.Core.JsInterop
 open Fable.React
 open Fable.React.Props
 open Thoth.Fetch
 open Thoth.Json
+
 open Types
 open StyledComponents
+open ReactBeautifulDnd
 
 [<Import("CATS_API_KEY", "./env")>]
 let (catsApiKey: string) = jsNative
 
-let inline TestMultipleChildren (elements: ReactElement list): ReactElement =
-    ofImport "default" "./TestMultipleChildren" [] elements
-
-type TestRenderPropProps =
-    { render: string -> ReactElement }
-
-let TestRenderProp = FunctionComponent.Of (fun (props: TestRenderPropProps) ->
-    let secretMessage = "sup"
-    props.render(secretMessage))
-
-type CatData =
-    { url: string }
+type CatData = { url: string }
 
 let catListsDecoder = 
     Decode.list (Decode.object (fun get -> 
         { url = get.Required.Field "url" Decode.string }))
 
-type CatImageProps = 
-    { src: string }
+type CatImageProps = { src: string }
 
 let GlobalStyles: Custom.ReactComponent = styled @@ createGlobalStyle [| "
     body {
@@ -46,7 +37,7 @@ let StyledApp: Custom.ReactComponent = styled @@ Div [| "
     margin: auto;
 " |]
 
-let StyledCatImage: Custom.SelfClosingReactComponent = styled @@ Img [| "
+let StyledCatImage: Custom.ReactComponent = styled @@ Img [| "
     width: 500px;
     height: 500px;
     object-fit: cover;
@@ -70,17 +61,19 @@ let appView = FunctionComponent.Of (fun () ->
         } |> ignore
     ), [||])
 
-    fragment [] [
+    DragDropContext [] [
         GlobalStyles [] []
-        StyledCatImage [ Src catImageUrl.current ] []
-        TestMultipleChildren [
-            div [] [str "yo"]
-            p [] [str "dude"] 
+        Droppable [
+            DroppableId "main"
+            DroppableProps.Children (fun provided snapshot -> 
+                div [ Style [ Color "white" ]; Ref provided.innerRef ] [
+                    StyledCatImage [ 
+                        Src catImageUrl.current 
+                    ] []
+                    if snapshot.isDraggingOver then str "dragging is over" else str "dragging ain't over"
+                ])
         ]
-        TestRenderProp { render = fun message ->
-            div [ Style [ Color "white" ] ] [ str message ] }
-    ]
-)
+    ])
 
 let App = StyledApp [] [ appView() ]
 
